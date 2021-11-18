@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter/services.dart';
-import 'package:baidu_face/baidu_face.dart';
+import 'package:aliyun_face/aliyun_face.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,42 +24,25 @@ class _MyAppState extends State<MyApp> {
 
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
-    print('=======================');
-    bool status = await BaiduFace.init('comMuka-face-android');
-
-    print(status);
-    print('=======================');
+    await AliyunFace.init();
   }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          appBar: AppBar(
-            title: const Text('Plugin example app'),
+        appBar: AppBar(
+          title: const Text('Plugin example app'),
+        ),
+        body: Center(
+          child: ElevatedButton(
+            child: Text('活体验证'),
+            onPressed: () async {
+              await AliyunFace.verify('1000002437');
+            },
           ),
-          body: ListView(
-            children: [
-              Center(
-                child: ElevatedButton(
-                  child: const Text('活体检测'),
-                  onPressed: () async {
-                    LikenessResult res = await BaiduFace.likeness();
-                    print(res.toString());
-                  },
-                ),
-              ),
-              Center(
-                child: ElevatedButton(
-                  child: const Text('活体检测2'),
-                  onPressed: () async {
-                    DetectResult res = await BaiduFace.detect();
-                    print(res.toString());
-                  },
-                ),
-              ),
-            ],
-          )),
+        ),
+      ),
     );
   }
 }

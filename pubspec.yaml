@@ -1,4 +1,4 @@
-name: baidu_face
+name: aliyun_face
 description: A new flutter plugin project.
 version: 0.0.1
 homepage:
@@ -28,10 +28,10 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.muka.baidu_face
-        pluginClass: BaiduFacePlugin
+        package: com.muka.aliyun_face
+        pluginClass: AliyunFacePlugin
       ios:
-        pluginClass: BaiduFacePlugin
+        pluginClass: AliyunFacePlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

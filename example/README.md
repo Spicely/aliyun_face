@@ -1,6 +1,6 @@
-# baidu_face_example
+# aliyun_face_example
 
-Demonstrates how to use the baidu_face plugin.
+Demonstrates how to use the aliyun_face plugin.
 
 ## Getting Started
 

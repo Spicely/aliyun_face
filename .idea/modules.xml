@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/baidu_face.iml" filepath="$PROJECT_DIR$/baidu_face.iml" />
-      <module fileurl="file://$PROJECT_DIR$/android/baidu_face_android.iml" filepath="$PROJECT_DIR$/android/baidu_face_android.iml" />
-      <module fileurl="file://$PROJECT_DIR$/example/android/baidu_face_example_android.iml" filepath="$PROJECT_DIR$/example/android/baidu_face_example_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aliyun_face.iml" filepath="$PROJECT_DIR$/aliyun_face.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/aliyun_face_android.iml" filepath="$PROJECT_DIR$/android/aliyun_face_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/android/aliyun_face_example_android.iml" filepath="$PROJECT_DIR$/example/android/aliyun_face_example_android.iml" />
     </modules>
   </component>
 </project>

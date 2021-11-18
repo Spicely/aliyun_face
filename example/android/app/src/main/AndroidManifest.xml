@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.muka.baidu_face_example">
+    package="com.muka.aliyun_face_example">
    <application
-        android:label="baidu_face_example"
+        android:label="aliyun_face_example"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
