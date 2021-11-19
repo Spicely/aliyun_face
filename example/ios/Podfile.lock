@@ -70,7 +70,7 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/webview_flutter_wkwebview/ios"
 
 SPEC CHECKSUMS:
-  aliyun_face: 70e8f4724159f38369d98000f83c32a141b6b11d
+  aliyun_face: 8679e3add4dc986b692b8fdb3c90668a60a145df
   connectivity_plus: 5f0eb61093bec56935f21a1699dd2758bc895587
   Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
   image_picker: 9aa50e1d8cdacdbed739e925b7eea16d014367e6
