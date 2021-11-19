@@ -25,7 +25,7 @@ class AliyunFacePlugin : FlutterPlugin, MethodCallHandler, ActivityAware,
     private lateinit var channel: MethodChannel
 
     override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "aliyun_face")
+        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "plugins.muka.com/aliyun_face")
         channel.setMethodCallHandler(this)
     }
 

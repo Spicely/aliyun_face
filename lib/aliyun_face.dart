@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 
 class AliyunFace {
-  static const MethodChannel _channel = MethodChannel('aliyun_face');
+  static const MethodChannel _channel = MethodChannel('plugins.muka.com/aliyun_face');
 
   /// 初始化
   static Future<bool> init() async {
