@@ -11,7 +11,17 @@ class AliyunFace {
     return status;
   }
 
-  /// 验证
+  ///
+  /// 获取MetaInfo数据
+  ///
+  /// 在调用刷脸认证服务端发起认证请求时，需要传入该MetaInfo值
+  ///
+  static Future<String> get getMetaInfos async {
+    final String metaInfos = await _channel.invokeMethod('getMetaInfos');
+    return metaInfos;
+  }
+
+  /// 活体验证
   static Future<bool> verify(String zimID) async {
     final bool status = await _channel.invokeMethod('verify', {'zimID': zimID});
     return status;

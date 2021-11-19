@@ -3,6 +3,7 @@ import 'dart:async';
 
 import 'package:flutter/services.dart';
 import 'package:aliyun_face/aliyun_face.dart';
+import 'package:flutter_muka/flutter_muka.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,7 +39,12 @@ class _MyAppState extends State<MyApp> {
           child: ElevatedButton(
             child: Text('活体验证'),
             onPressed: () async {
-              await AliyunFace.verify('1000002437');
+              String metaInfos = await AliyunFace.getMetaInfos;
+              dynamic data = await HttpUtils.request(
+                'http://shopceshi.xn--51-d05d.com/api/rl/index',
+                data: FormData.fromMap({'MetaInfo': metaInfos}),
+              );
+              await AliyunFace.verify(data['data']['ResultObject']['CertifyId']);
             },
           ),
         ),

@@ -37,6 +37,10 @@ class AliyunFacePlugin : FlutterPlugin, MethodCallHandler, ActivityAware,
 
                 result.success(true)
             }
+            "getMetaInfos" -> {
+                val metaInfos = ZIMFacade.getMetaInfos(activity)
+                result.success(metaInfos)
+            }
             "verify" -> {
                 var zimID: String? = call.argument<String>("zimID")
                 var zimFacade = ZIMFacadeBuilder.create(activity);
