@@ -16,11 +16,17 @@ A new flutter plugin project.
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
   s.vendored_frameworks = 'Framework/*.framework'
-  s.frameworks = 'CoreGraphics', 'Accelerate', 'SystemConfiguration', 'AssetsLibrary', 'CoreTelephony', 'QuartzCore', 'CoreFoundation', 'CoreLocation', 'ImageIO', 'CoreMedia', 'CoreMotion', 'AVFoundation', 'WebKit', 'AudioToolbox', 'CFNetwork', 'MobileCoreServices', 'AdSupport', 'libresolv', 'libz', 'libc++', 'libc++abi', 'libc++_1', 'libz_1_2_8'
-  s..pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC,-lxml2,-framework,"BioAuthAPI"' }
+  s.frameworks = 'CoreGraphics', 'Accelerate', 'SystemConfiguration', 'AssetsLibrary', 'CoreTelephony', 'QuartzCore', 'CoreFoundation', 'CoreLocation', 'ImageIO', 'CoreMedia', 'CoreMotion', 'AVFoundation', 'WebKit', 'AudioToolbox', 'CFNetwork', 'MobileCoreServices', 'AdSupport'
+  s.libraries = 'resolv', 'z', 'c++', 'c++abi', 'c++.1', 'z.1.2.8'
+  s.resources = ['Framework/APBToygerFacade.framework/APBToygerFacade.bundle', 'Framework/ToygerService.framework/ToygerService.bundle', 'Framework/BioAuthEngine.framework/BioAuthEngine.bundle', 'Framework/OCRDetectSDKForTech.framework/OCRXMedia.bundle']
   s.platform = :ios, '9.0'
 
   # Flutter.framework does not contain a i386 slice.
-  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
+  s.pod_target_xcconfig = {
+     'DEFINES_MODULE' => 'YES',
+     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386',
+     'ENABLE_BITCODE' => 'NO',
+     'OTHER_LDFLAGS' => '-lObjC -lxml2 -framework "BioAuthAPI" -all_load', 
+  }
   s.swift_version = '5.0'
 end

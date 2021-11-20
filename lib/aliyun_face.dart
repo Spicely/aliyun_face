@@ -16,7 +16,7 @@ class AliyunFace {
   ///
   /// 在调用刷脸认证服务端发起认证请求时，需要传入该MetaInfo值
   ///
-  static Future<String> get getMetaInfos async {
+  static Future<dynamic> get getMetaInfos async {
     final String metaInfos = await _channel.invokeMethod('getMetaInfos');
     return metaInfos;
   }

@@ -10,6 +10,8 @@
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
 		74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74858FAE1ED2DC5600515810 /* AppDelegate.swift */; };
+		826B90B82748CE2A005087E5 /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 826B90B72748CE2A005087E5 /* libc++.1.tbd */; };
+		826B90B92748CE33005087E5 /* libz.1.2.8.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 826AE64327482830000D1DC0 /* libz.1.2.8.tbd */; };
 		8345C4E2A806A41670873A0B /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC1FD547DEC4A6EF672A8153 /* Pods_Runner.framework */; };
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
@@ -41,6 +43,7 @@
 		7AFA3C8E1D35360C0083082E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Flutter/Release.xcconfig; sourceTree = "<group>"; };
 		826AE64127482820000D1DC0 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
 		826AE64327482830000D1DC0 /* libz.1.2.8.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.8.tbd; path = usr/lib/libz.1.2.8.tbd; sourceTree = SDKROOT; };
+		826B90B72748CE2A005087E5 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
 		9740EEB21CF90195004384FC /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Flutter/Debug.xcconfig; sourceTree = "<group>"; };
 		9740EEB31CF90195004384FC /* Generated.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Generated.xcconfig; path = Flutter/Generated.xcconfig; sourceTree = "<group>"; };
 		97C146EE1CF9000F007C117D /* Runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Runner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				826B90B92748CE33005087E5 /* libz.1.2.8.tbd in Frameworks */,
+				826B90B82748CE2A005087E5 /* libc++.1.tbd in Frameworks */,
 				8345C4E2A806A41670873A0B /* Pods_Runner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +71,7 @@
 		25A1EC7FE50D1164C9D03536 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				826B90B72748CE2A005087E5 /* libc++.1.tbd */,
 				826AE64327482830000D1DC0 /* libz.1.2.8.tbd */,
 				826AE64127482820000D1DC0 /* libc++abi.tbd */,
 				CC1FD547DEC4A6EF672A8153 /* Pods_Runner.framework */,
