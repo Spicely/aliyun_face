@@ -1,4 +1,6 @@
 import 'dart:async';
+import 'dart:convert';
+import 'dart:io';
 
 import 'package:flutter/services.dart';
 
@@ -16,9 +18,13 @@ class AliyunFace {
   ///
   /// 在调用刷脸认证服务端发起认证请求时，需要传入该MetaInfo值
   ///
-  static Future<dynamic> get getMetaInfos async {
-    final String metaInfos = await _channel.invokeMethod('getMetaInfos');
-    return metaInfos;
+  static Future<String> get getMetaInfos async {
+    final dynamic metaInfos = await _channel.invokeMethod('getMetaInfos');
+    if (Platform.isAndroid) {
+      return metaInfos;
+    } else {
+      return jsonEncode(metaInfos);
+    }
   }
 
   /// 活体验证

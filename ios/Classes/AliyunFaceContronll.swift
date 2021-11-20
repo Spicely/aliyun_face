@@ -23,17 +23,6 @@ class AliyunFaceContronll: NSObject{
         channel.setMethodCallHandler(onMethodCall)
     }
     
-    func getJSONStringFromDictionary(dictionary:NSDictionary) -> String {
-        if (!JSONSerialization.isValidJSONObject(dictionary)) {
-            print("无法解析出JSONString")
-            return ""
-        }
-        let data : NSData! = try? JSONSerialization.data(withJSONObject: dictionary, options: []) as NSData?
-        let JSONString = NSString(data:data as Data,encoding: String.Encoding.utf8.rawValue)
-        return JSONString! as String
-        
-    }
-    
     func onMethodCall(methodCall: FlutterMethodCall, result: @escaping FlutterResult) {
         switch methodCall.method{
         case "init":
@@ -41,7 +30,7 @@ class AliyunFaceContronll: NSObject{
             result(true)
         case "getMetaInfos":
             let metaInfo = AliyunIdentityManager.getMetaInfo()
-            result(getJSONStringFromDictionary(dictionary: metaInfo! as NSDictionary))
+            result(metaInfo)
         case "verify":
             let args = methodCall.arguments as? [String: Any]
             let zimID = args?["zimID"] as? String
