@@ -40,6 +40,9 @@ class _MyAppState extends State<MyApp> {
             child: Text('活体验证'),
             onPressed: () async {
               String metaInfos = await AliyunFace.getMetaInfos;
+              print('========================');
+              print(metaInfos);
+              print('========================');
               dynamic data = await HttpUtils.request(
                 'http://shopceshi.xn--51-d05d.com/api/rl/index',
                 data: FormData.fromMap({'MetaInfo': metaInfos}),

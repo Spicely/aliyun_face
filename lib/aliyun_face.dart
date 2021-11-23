@@ -1,9 +1,11 @@
 import 'dart:async';
+import 'dart:convert';
+import 'dart:io';
 
 import 'package:flutter/services.dart';
 
 class AliyunFace {
-  static const MethodChannel _channel = MethodChannel('aliyun_face');
+  static const MethodChannel _channel = MethodChannel('plugins.muka.com/aliyun_face');
 
   /// 初始化
   static Future<bool> init() async {
@@ -17,8 +19,12 @@ class AliyunFace {
   /// 在调用刷脸认证服务端发起认证请求时，需要传入该MetaInfo值
   ///
   static Future<String> get getMetaInfos async {
-    final String metaInfos = await _channel.invokeMethod('getMetaInfos');
-    return metaInfos;
+    final dynamic metaInfos = await _channel.invokeMethod('getMetaInfos');
+    if (Platform.isAndroid) {
+      return metaInfos;
+    } else {
+      return jsonEncode(metaInfos);
+    }
   }
 
   /// 活体验证
