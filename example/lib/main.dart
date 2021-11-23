@@ -47,6 +47,9 @@ class _MyAppState extends State<MyApp> {
                 'http://shopceshi.xn--51-d05d.com/api/rl/index',
                 data: FormData.fromMap({'MetaInfo': metaInfos}),
               );
+              print('========================');
+              print(data['data']['ResultObject']['CertifyId']);
+              print('========================');
               await AliyunFace.verify(data['data']['ResultObject']['CertifyId']);
             },
           ),
