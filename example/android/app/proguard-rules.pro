@@ -1,6 +1,4 @@
 
--verbose
-
 -keep class com.aliyun.aliyunface.network.model.** {*;}
 -keep class com.aliyun.aliyunface.api.ZIMCallback {*;}
 -keep class com.aliyun.aliyunface.api.ZIMFacade {*;}
