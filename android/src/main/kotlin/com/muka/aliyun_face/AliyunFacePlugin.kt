@@ -4,6 +4,10 @@ import android.app.Activity
 import android.content.Intent
 import android.util.Log
 import androidx.annotation.NonNull
+import com.aliyun.aliyunface.api.ZIMCallback
+import com.aliyun.aliyunface.api.ZIMFacade
+import com.aliyun.aliyunface.api.ZIMFacadeBuilder
+import com.aliyun.aliyunface.api.ZIMResponse
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
@@ -13,10 +17,6 @@ import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 import io.flutter.plugin.common.PluginRegistry
-
-
-import com.aliyun.aliyunface.api.ZIMFacade;
-import com.aliyun.aliyunface.api.ZIMFacadeBuilder;
 
 /** AliyunFacePlugin */
 class AliyunFacePlugin : FlutterPlugin, MethodCallHandler, ActivityAware,
