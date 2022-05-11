@@ -1,2 +1,0 @@
-configurations.maybeCreate("default")
-artifacts.add("default", file('android-aliyunbasicstl-sdk-release-1.4.9-20211111195256.aar'))

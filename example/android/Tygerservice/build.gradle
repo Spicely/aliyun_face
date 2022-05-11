@@ -1,2 +1,0 @@
-configurations.maybeCreate("default")
-artifacts.add("default", file('tygerservice-1.0.0.210619103852.aar'))

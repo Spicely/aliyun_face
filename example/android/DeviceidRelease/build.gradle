@@ -1,2 +1,0 @@
-configurations.maybeCreate("default")
-artifacts.add("default", file('deviceid-release-6.0.7.20211109.aar'))

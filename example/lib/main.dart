@@ -3,7 +3,6 @@ import 'dart:async';
 
 import 'package:flutter/services.dart';
 import 'package:aliyun_face/aliyun_face.dart';
-import 'package:flutter_muka/flutter_muka.dart';
 
 void main() {
   runApp(const MyApp());
@@ -43,14 +42,8 @@ class _MyAppState extends State<MyApp> {
               print('========================');
               print(metaInfos);
               print('========================');
-              dynamic data = await HttpUtils.request(
-                'http://shopceshi.xn--51-d05d.com/api/rl/index',
-                data: FormData.fromMap({'MetaInfo': metaInfos}),
-              );
-              print('========================');
-              print(data['data']['ResultObject']['CertifyId']);
-              print('========================');
-              await AliyunFace.verify(data['data']['ResultObject']['CertifyId']);
+
+              await AliyunFace.verify('你的ID');
             },
           ),
         ),

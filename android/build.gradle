@@ -41,20 +41,21 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 18
     }
 }
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-    implementation project(path: ':AndroidAliyunbasicstlSdkRelease')
-    implementation project(path: ':AndroidAliyunDeviceFG')
-    implementation project(path: ':AndroidAliyunfaceSdkRelease')
-    implementation project(path: ':DeviceidRelease')
-    implementation project(path: ':Tygerservice')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+
+    //阿里云实人认证依赖
+    implementation files('libs/android-aliyunface-sdk-release-1.6.0-20220414192835.aar')
     implementation 'com.squareup.okhttp3:okhttp:3.11.0'
     implementation 'com.squareup.okio:okio:1.14.0'
     implementation 'com.alibaba:fastjson:1.2.62'
     implementation 'com.aliyun.dpa:oss-android-sdk:+'
+ 
 }
