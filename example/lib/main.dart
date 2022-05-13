@@ -3,6 +3,7 @@ import 'dart:async';
 
 import 'package:flutter/services.dart';
 import 'package:aliyun_face/aliyun_face.dart';
+import 'package:dio/dio.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,12 +39,15 @@ class _MyAppState extends State<MyApp> {
           child: ElevatedButton(
             child: Text('活体验证'),
             onPressed: () async {
-              String metaInfos = await AliyunFace.getMetaInfos;
-              print('========================');
-              print(metaInfos);
-              print('========================');
-
-              await AliyunFace.verify('你的ID');
+              String metaInfo = await AliyunFace.getMetaInfos;
+              Response res = await Dio().post('https://test.uhomeing.com/app/face/getCertifyId', data: {'meta_info': metaInfo});
+              print(res.data);
+              bool status = await AliyunFace.verify(res.data['data']);
+              if (status) {
+                print('success');
+              } else {
+                print('人脸识别失败,请稍后重试');
+              }
             },
           ),
         ),
