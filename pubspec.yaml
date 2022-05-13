@@ -1,7 +1,7 @@
 name: aliyun_face
-description: A new flutter plugin project.
+description: 阿里云活体检测
 version: 0.0.1
-homepage:
+homepage: https://github.com/Spicely
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
