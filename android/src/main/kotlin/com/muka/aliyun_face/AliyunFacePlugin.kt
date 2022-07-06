@@ -7,7 +7,6 @@ import androidx.annotation.NonNull
 import com.aliyun.aliyunface.api.ZIMCallback
 import com.aliyun.aliyunface.api.ZIMFacade
 import com.aliyun.aliyunface.api.ZIMFacadeBuilder
-import com.aliyun.aliyunface.api.ZIMResponse
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
